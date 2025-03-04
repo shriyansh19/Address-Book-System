@@ -37,3 +37,6 @@ class Contact {
         return `${this.firstName} ${this.lastName}, ${this.address}, ${this.city}, ${this.state}, ${this.zip}, ${this.phone}, ${this.email}`;
     }
 }
+
+// Export the Contact class
+module.exports = Contact;

@@ -111,5 +111,5 @@ class AddressBook {
 
 }
 
-
-
+// Export the AddressBook class
+module.exports = AddressBook;
