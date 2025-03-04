@@ -84,6 +84,13 @@ class AddressBook {
         }, {});
     }
 
+    // UC 11: Sort contacts alphabetically by name
+    sortByName() {
+        return this.contacts.sort((a, b) =>
+            a.firstName.localeCompare(b.firstName) || a.lastName.localeCompare(b.lastName)
+        );
+    }
+
 }
 
 
