@@ -69,6 +69,21 @@ class AddressBook {
         }, {});
     }
 
+    // UC 10: Count contacts by city or state
+    countByCity() {
+        return this.contacts.reduce((acc, contact) => {
+            acc[contact.city] = (acc[contact.city] || 0) + 1;
+            return acc;
+        }, {});
+    }
+
+    countByState() {
+        return this.contacts.reduce((acc, contact) => {
+            acc[contact.state] = (acc[contact.state] || 0) + 1;
+            return acc;
+        }, {});
+    }
+
 }
 
 
