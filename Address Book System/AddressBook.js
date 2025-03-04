@@ -52,6 +52,23 @@ class AddressBook {
         return this.contacts.filter(contact => contact.state === state);
     }
 
+    // UC 9: View contacts grouped by city or state
+    viewByCity() {
+        return this.contacts.reduce((acc, contact) => {
+            acc[contact.city] = acc[contact.city] || [];
+            acc[contact.city].push(contact);
+            return acc;
+        }, {});
+    }
+
+    viewByState() {
+        return this.contacts.reduce((acc, contact) => {
+            acc[contact.state] = acc[contact.state] || [];
+            acc[contact.state].push(contact);
+            return acc;
+        }, {});
+    }
+
 }
 
 
