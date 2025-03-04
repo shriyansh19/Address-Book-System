@@ -43,5 +43,16 @@ class AddressBook {
         return this.contacts.reduce(count => count + 1, 0);
     }
 
+     // UC 8: Search contacts by city or state
+     searchByCity(city) {
+        return this.contacts.filter(contact => contact.city === city);
+    }
+
+    searchByState(state) {
+        return this.contacts.filter(contact => contact.state === state);
+    }
+
 }
+
+
 
