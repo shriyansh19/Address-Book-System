@@ -1,4 +1,6 @@
-// UC 2: Ability to find existing contact person using their name and edit it
+// UC 3: Ability to find existing contact person using their name and edit it
+
+const Contact = require("./Contact");
 
 class AddressBook {
     constructor() {
