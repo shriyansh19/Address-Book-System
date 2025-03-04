@@ -38,5 +38,10 @@ class AddressBook {
         if (this.contacts.length === initialLength) throw new Error("Contact not found");
     }
 
+    // UC 6: Count the number of contacts in the address book
+    countContacts() {
+        return this.contacts.reduce(count => count + 1, 0);
+    }
+
 }
 
