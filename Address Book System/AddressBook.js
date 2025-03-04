@@ -91,6 +91,24 @@ class AddressBook {
         );
     }
 
+    // UC 12: Sort contacts by city, state, or zip
+    sortByCity() {
+        return this.contacts.sort((a, b) => a.city.localeCompare(b.city));
+    }
+
+    sortByState() {
+        return this.contacts.sort((a, b) => a.state.localeCompare(b.state));
+    }
+
+    sortByZip() {
+        return this.contacts.sort((a, b) => a.zip - b.zip);
+    }
+
+    // Convert all contacts to string format
+    toString() {
+        return this.contacts.map(contact => contact.toString()).join("\n");
+    }
+
 }
 
 
